@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Sistema Veterinario</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#004ac6",
+            "primary-container": "#2563eb",
+            secondary: "#006c49",
+            "secondary-container": "#6cf8bb",
+            surface: "#f8f9ff",
+            "surface-container-low": "#eff4ff",
+            "surface-container": "#e5eeff",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#434655",
+            outline: "#737686",
+            "outline-variant": "#c3c6d7",
+            error: "#ba1a1a"
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-brand-panel">
+      <div class="brand-content">
+        <div class="brand-logo">
+          <span class="material-symbols-outlined">pets</span>
+        </div>
+
+        <h1>Paws &amp; Cross</h1>
+        <p class="brand-subtitle">Sistema de gestión veterinaria</p>
+
+        <div class="brand-features">
+          <div class="feature-item">
+            <span class="material-symbols-outlined">clinical_notes</span>
+            Expedientes clínicos dinámicos
+          </div>
+
+          <div class="feature-item">
+            <span class="material-symbols-outlined">calendar_month</span>
+            Calendario de citas conectado
+          </div>
+
+          <div class="feature-item">
+            <span class="material-symbols-outlined">vaccines</span>
+            Control de vacunas y seguimiento
+          </div>
+
+          <div class="feature-item">
+            <span class="material-symbols-outlined">monitoring</span>
+            Dashboard administrativo en tiempo real
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-form-panel">
+      <div class="login-card">
+        <div class="login-header">
+          <p class="login-eyebrow">Bienvenido</p>
+          <h2>Iniciar sesión</h2>
+          <p>Accede al panel principal del sistema veterinario.</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <label>
+            Correo electrónico
+            <input
+              type="email"
+              value="admin@veterinaria.com"
+              placeholder="admin@veterinaria.com"
+              required
+            />
+          </label>
+
+          <label>
+            Contraseña
+            <input
+              type="password"
+              value="admin123"
+              placeholder="••••••••"
+              required
+            />
+          </label>
+
+          <button type="submit" class="login-button">
+            Entrar al sistema
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </form>
+        
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

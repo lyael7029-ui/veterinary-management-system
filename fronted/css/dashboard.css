@@ -1,0 +1,332 @@
+/* ===============================
+   DASHBOARD STYLES
+   Page-specific components
+   =============================== */
+
+.dashboard-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.dashboard-subtitle {
+  color: var(--color-on-surface-variant);
+}
+
+
+
+.date-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 0.5rem;
+  background: var(--color-surface-container);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.metrics-grid {
+  grid-column: span 12 / span 12;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(11, 28, 48, 0.08);
+}
+
+.metric-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  border-radius: 9999px;
+}
+
+.metric-icon span {
+  font-size: 2.25rem;
+}
+
+.metric-icon-primary {
+  color: var(--color-primary);
+  background: rgba(0, 74, 198, 0.10);
+}
+
+.metric-icon-secondary {
+  color: var(--color-secondary);
+  background: rgba(108, 248, 187, 0.30);
+}
+
+.metric-icon-tertiary {
+  color: var(--color-tertiary);
+  background: rgba(153, 97, 0, 0.16);
+}
+
+.metric-number {
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.metric-label {
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.quick-actions-wrapper {
+  grid-column: span 12 / span 12;
+}
+
+.quick-actions-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--color-primary-container);
+  color: white;
+  box-shadow: 0 12px 24px rgba(0, 74, 198, 0.16);
+}
+
+.quick-actions-title {
+  margin-bottom: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.quick-actions-list {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-action-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.quick-action-primary {
+  color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.quick-action-primary:hover {
+  background: var(--color-surface-bright, #f8f9ff);
+}
+
+.quick-action-secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.quick-action-secondary:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.quick-actions-bg-icon {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  opacity: 0.20;
+  transform: rotate(12deg);
+}
+
+.quick-actions-bg-icon span {
+  font-size: 120px;
+}
+
+.appointments-card {
+  grid-column: span 12 / span 12;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 0.75rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-outline);
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.section-link {
+  color: var(--color-primary);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead tr {
+  background: var(--color-surface-low);
+  text-align: left;
+}
+
+.data-table th {
+  padding: 0.75rem 1.5rem;
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.data-table td {
+  padding: 1rem 1.5rem;
+}
+
+.data-table th:first-child,
+.data-table td:first-child {
+  padding-left: 2rem;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.data-table tbody {
+  border-top: 1px solid var(--color-outline);
+}
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: var(--color-error);
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  z-index: 50;
+  width: 320px;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px rgba(11, 28, 48, 0.12);
+}
+
+.notification-title {
+  margin-bottom: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .metrics-grid {
+    grid-column: span 9 / span 9;
+  }
+
+  .quick-actions-wrapper {
+    grid-column: span 3 / span 3;
+  }
+}

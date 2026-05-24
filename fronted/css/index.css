@@ -1,0 +1,231 @@
+/* ===============================
+   INDEX / LOGIN STYLES
+   Pantalla de acceso del sistema
+   =============================== */
+
+:root {
+  --color-primary: #004ac6;
+  --color-primary-container: #2563eb;
+  --color-secondary: #006c49;
+  --color-secondary-container: #6cf8bb;
+  --color-surface: #f8f9ff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #434655;
+  --color-outline: #737686;
+  --color-outline-variant: #c3c6d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  color: var(--color-on-surface);
+  background: var(--color-surface);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.login-brand-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(108, 248, 187, 0.32), transparent 30%),
+    linear-gradient(135deg, #004ac6 0%, #00327f 55%, #00174b 100%);
+}
+
+.login-brand-panel::after {
+  content: "pets";
+  position: absolute;
+  right: -2rem;
+  bottom: -3rem;
+  font-family: 'Material Symbols Outlined';
+  font-size: 18rem;
+  opacity: 0.08;
+  transform: rotate(-12deg);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+}
+
+.brand-logo {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  color: var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.brand-logo span {
+  font-size: 3rem;
+}
+
+.brand-content h1 {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  margin: 1rem 0 2.5rem;
+  font-size: 1.25rem;
+  opacity: 0.86;
+}
+
+.brand-features {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  font-weight: 700;
+}
+
+.login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: var(--color-surface);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(11, 28, 48, 0.10);
+}
+
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.login-eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.login-header h2 {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.login-header p {
+  margin: 0.5rem 0 0;
+  color: var(--color-on-surface-variant);
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--color-on-surface);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 0.9rem;
+  background: var(--color-surface-container-low);
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 74, 198, 0.14);
+}
+
+.login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.9rem;
+  background: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.login-button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.login-note {
+  margin: 1.25rem 0 0;
+  color: var(--color-on-surface-variant);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-panel {
+    padding: 3rem 1.5rem;
+  }
+
+  .login-form-panel {
+    padding: 2rem 1.5rem;
+  }
+}

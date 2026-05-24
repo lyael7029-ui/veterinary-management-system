@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacientes | Sistema Veterinario</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            tertiary: "#784b00",
+            "on-secondary-fixed": "#002113",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#b4c5ff",
+            "on-tertiary-container": "#ffeedd",
+            "on-secondary-container": "#00714d",
+            surface: "#f8f9ff",
+            "on-primary-container": "#eeefff",
+            "surface-dim": "#cbdbf5",
+            "surface-bright": "#f8f9ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#653e00",
+            "tertiary-fixed-dim": "#ffb95f",
+            "surface-container-highest": "#d3e4fe",
+            "tertiary-fixed": "#ffddb8",
+            "tertiary-container": "#996100",
+            background: "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#00174b",
+            "on-error-container": "#93000a",
+            "on-surface": "#0b1c30",
+            "surface-container-high": "#dce9ff",
+            "on-primary-fixed-variant": "#003ea8",
+            primary: "#004ac6",
+            "surface-container-low": "#eff4ff",
+            "secondary-container": "#6cf8bb",
+            "secondary-fixed": "#6ffbbe",
+            "on-background": "#0b1c30",
+            "outline-variant": "#c3c6d7",
+            "primary-fixed-dim": "#b4c5ff",
+            "surface-tint": "#0053db",
+            "on-surface-variant": "#434655",
+            outline: "#737686",
+            "inverse-surface": "#213145",
+            secondary: "#006c49",
+            error: "#ba1a1a",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#4edea3",
+            "primary-container": "#2563eb",
+            "surface-container": "#e5eeff",
+            "on-secondary-fixed-variant": "#005236",
+            "on-tertiary-fixed": "#2a1700",
+            "primary-fixed": "#dbe1ff",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary": "#ffffff",
+            "surface-variant": "#d3e4fe"
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="./css/global.css" />
+<link rel="stylesheet" href="./css/pacientes.css" />
+
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img
+        class="sidebar-logo"
+        alt="Logo de la veterinaria"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBU2rWXY5RNAiXS-hFVwXTVv3Dar18FL0kjdYO3AaWnga3sl2O2rLQurA3O41jdXQhfrt7YBSGcd7wbwYALsfQwxe1tYZf8tsmVI9vCYBiqMNMnO2hXhDv0FYHDbMjxXkjXHFSOVLSaK_-QmSmVq5AhwXwhO6ts92zNFW50vSMjqlfQogiNyvdPFDrepgVh5IbfZKtNHvfCfKRU46peKpYmbBaixonXEnLu-FQsMt6vHoEB9rJ00u3uOBBFOm3gcf2F3znvJtvLZJ"
+      />
+      <div>
+        <h1 class="sidebar-title">Paws &amp; Cross</h1>
+        <p class="sidebar-subtitle">Clinica Veterinaria</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="./dashboard.html">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span>Dashboard</span>
+      </a>
+      <a class="sidebar-link sidebar-link-active" href="./pacientes.html">
+        <span class="material-symbols-outlined">pets</span>
+        <span>Pacientes</span>
+      </a>
+      <a class="sidebar-link" href="./expedientes.html">
+        <span class="material-symbols-outlined">description</span>
+        <span>Expedientes</span>
+      </a>
+      <a class="sidebar-link" href="./citas.html">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span>Citas</span>
+      </a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-search">
+      <div class="search-box">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input
+          id="searchPacientes"
+          class="search-input"
+          placeholder="Buscar por mascota, raza o dueño..."
+          type="text"
+        />
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="notification-wrapper">
+        <button id="btnNotificaciones" class="topbar-icon-btn relative" type="button" aria-label="Abrir notificaciones">
+          <span class="material-symbols-outlined">notifications</span>
+          <span id="notificacionBadge" class="notification-badge hidden">0</span>
+        </button>
+
+        <div id="dropdownNotificaciones" class="notification-dropdown hidden">
+          <h4 class="notification-title">Notificaciones</h4>
+          <div id="listaNotificaciones" class="notification-list"></div>
+        </div>
+      </div>
+      <button class="topbar-icon-btn" type="button" aria-label="Actividad reciente">
+        <span class="material-symbols-outlined">chat_bubble</span>
+      </button>
+      <button class="topbar-icon-btn" type="button" aria-label="Ayuda">
+        <span class="material-symbols-outlined">help</span>
+      </button>
+    </div>
+
+    <div class="topbar-divider"></div>
+
+    <div class="user-summary">
+      <p class="user-role">Administrador</p>
+      <p class="user-system">Sistema Veterinario</p>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <div class="pacientes-container">
+      <section class="pacientes-header">
+        <div>
+          <h2 class="pacientes-title">Directorio de Pacientes</h2>
+          <p class="pacientes-subtitle">Administra pacientes, dueños y expedientes clínicos.</p>
+        </div>
+
+        <div class="filter-group">
+          <button id="btnAllPets" class="filter-btn filter-btn-active" type="button">
+            Todos los pacientes
+          </button>
+          <button id="btnInClinic" class="filter-btn" type="button">
+            En clínica
+          </button>
+          <button id="btnUrgent" class="filter-btn" type="button">
+            Urgente
+          </button>
+        </div>
+      </section>
+
+      <button id="btnAbrirModalPaciente" class="add-patient-card" type="button">
+        <div class="add-patient-icon">
+          <span class="material-symbols-outlined text-primary text-3xl">add</span>
+        </div>
+        <p class="add-patient-title">Agregar paciente</p>
+        <p class="add-patient-text">Registrar un nuevo paciente en la base de datos</p>
+      </button>
+
+      <section id="patientsGrid" class="patients-grid"></section>
+    </div>
+  </main>
+
+  <button class="mobile-fab lg:hidden" type="button" aria-label="Agregar paciente" onclick="prepararFormularioNuevoPaciente()">
+    <span class="material-symbols-outlined text-3xl">add</span>
+  </button>
+
+  <div id="modalPaciente" class="modal-overlay hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Agregar paciente</h2>
+        <button id="btnCerrarModalPaciente" class="modal-close-btn" type="button" aria-label="Cerrar modal">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form id="formPaciente" class="patient-form">
+        <input name="owner_name" placeholder="Nombre del dueño" required class="form-field" />
+        <input name="phone" placeholder="Teléfono" class="form-field" />
+        <input name="email" placeholder="Correo" class="form-field" />
+        <input name="address" placeholder="Dirección" class="form-field" />
+
+        <input name="name" placeholder="Nombre de la mascota" required class="form-field" />
+        <input name="species" placeholder="Especie: Perro, gato..." class="form-field" />
+        <input name="breed" placeholder="Raza" class="form-field" />
+        <input name="age" type="number" placeholder="Edad" class="form-field" />
+        <input name="weight" type="number" step="0.01" placeholder="Peso kg" class="form-field" />
+
+        <select name="gender" class="form-field">
+          <option value="">Sexo</option>
+          <option value="Macho">Macho</option>
+          <option value="Hembra">Hembra</option>
+        </select>
+
+        <input name="allergies" placeholder="Alergias" class="form-field" />
+
+        <select name="status" class="form-field">
+          <option value="Estable">Estable</option>
+          <option value="Urgente">Urgente</option>
+          <option value="En tratamiento">En tratamiento</option>
+          <option value="Vacuna pendiente">Vacuna pendiente</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="button" id="btnCancelarPaciente" class="btn-outline">
+            Cancelar
+          </button>
+
+          <button type="submit" class="btn-primary">
+            Guardar paciente
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/shared/notifications.js"></script>
+  <script src="./js/pacientes/config.js"></script>
+  <script src="./js/pacientes/api.js"></script>
+  <script src="./js/pacientes/render.js"></script>
+  <script src="./js/pacientes/modal.js"></script>
+  <script src="./js/pacientes/actions.js"></script>
+  <script src="./js/pacientes/search.js"></script>
+  <script src="./js/pacientes/filters.js"></script>
+  <script src="./js/pacientes/pacientes.js"></script>
+</body>
+</html>

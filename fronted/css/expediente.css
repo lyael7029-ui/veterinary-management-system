@@ -1,0 +1,346 @@
+/* ===============================
+   EXPEDIENTE STYLES
+   Componentes específicos del expediente clínico
+   =============================== */
+
+.topbar-spacer {
+  flex: 1;
+}
+
+.expediente-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.patient-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(11, 28, 48, 0.04);
+}
+
+.patient-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.patient-avatar-large {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: rgba(0, 74, 198, 0.10);
+  border: 4px solid var(--color-surface-container);
+  border-radius: 1.25rem;
+}
+
+.patient-avatar-large > .material-symbols-outlined {
+  font-size: 4rem;
+}
+
+.patient-status-badge {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  padding: 0.35rem 0.75rem;
+  color: #ffffff;
+  background: var(--color-secondary);
+  border-radius: 9999px;
+  box-shadow: 0 6px 14px rgba(0, 108, 73, 0.18);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.patient-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.patient-profile-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.patient-profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  color: var(--color-on-surface-variant);
+}
+
+.patient-profile-meta span {
+  padding: 0.35rem 0.75rem;
+  background: var(--color-surface-container-low);
+  border-radius: 9999px;
+  font-size: 14px;
+}
+
+.patient-profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.expediente-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.record-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  height: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: #ffffff;
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+}
+
+.record-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  color: var(--color-on-surface-variant);
+  border-radius: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.record-tab:hover {
+  background: var(--color-surface-container-low);
+}
+
+.record-tab-active {
+  color: var(--color-on-primary-container);
+  background: var(--color-primary-container);
+  box-shadow: 0 4px 12px rgba(0, 74, 198, 0.10);
+}
+
+.record-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.record-section {
+  padding: 1.5rem;
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(11, 28, 48, 0.04);
+}
+
+.record-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.record-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.record-section-subtitle {
+  margin-top: 0.25rem;
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+.record-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.btn-outline {
+  color: var(--color-primary);
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-outline);
+}
+
+.btn-outline:hover {
+  background: var(--color-surface-container-high);
+}
+
+.btn-danger {
+  color: #ffffff;
+  background: var(--color-error);
+}
+
+.btn-danger:hover {
+  opacity: 0.88;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 36rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 24px 50px rgba(11, 28, 48, 0.18);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.modal-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.modal-close-btn {
+  color: var(--color-on-surface-variant);
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--color-error);
+}
+
+.modal-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.form-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 74, 198, 0.16);
+}
+
+.modal-actions-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 1023px) {
+  .patient-profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .patient-profile-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .expediente-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .record-sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .record-tab {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .patient-profile-main {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .patient-profile-name {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .record-section-header,
+  .modal-actions-between {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .modal-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
