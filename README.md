@@ -188,7 +188,7 @@ Durante el desarrollo del proyecto se fortalecieron habilidades relacionadas con
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![dashboard](screenshots/dashboard.png)
 
 ## Gestión de pacientes
 
